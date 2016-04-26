@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="PopupWindowAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_dialog_show</item>
+        <item name="android:windowExitAnimation">@anim/anim_dialog_hide</item>
+    </style>
+
+    <style name="PopupWindowRightAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/self_right_in</item>
+        <item name="android:windowExitAnimation">@anim/self_right_out</item>
+    </style>
+
+    <style name="PopupWindowLeftAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/self_left_in</item>
+        <item name="android:windowExitAnimation">@anim/self_left_out</item>
+    </style>
+
+    <style name="PopupWindowTopAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/self_top_in</item>
+        <item name="android:windowExitAnimation">@anim/self_top_out</item>
+    </style>
+
+    <style name="PopupWindowBottomAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/self_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/self_bottom_out</item>
+    </style>
+
+</resources>
