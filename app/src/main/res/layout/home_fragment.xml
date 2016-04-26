@@ -17,5 +17,33 @@
             android:gravity="center"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="首页"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"/>
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="搜索"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"/>
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/darkviolet">
+
+
+    </LinearLayout>
 </LinearLayout>

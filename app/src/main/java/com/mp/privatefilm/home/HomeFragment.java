@@ -17,11 +17,14 @@ public class HomeFragment extends BaseFragment {
 
     @Bind(R.id.setting)
     protected ButtonFlat setting;
+    @Bind(R.id.search)
+    protected ButtonFlat search;
 
     @Override
     protected void onCreateView(Bundle savedInstanceState) {
         setContentView(R.layout.home_fragment);
         setting.setBackgroundColor(ContextCompat.getColor(context, R.color.white));
+        search.setBackgroundColor(ContextCompat.getColor(context, R.color.white));
     }
 
     @Override
