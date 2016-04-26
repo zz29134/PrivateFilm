@@ -3,10 +3,37 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/darkviolet">
+
+        <EditText
+            android:id="@+id/search_editText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6.0"
+            android:background="@color/white"
+            android:layout_margin="5dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"/>
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:layout_margin="5dp"
+            android:src="@mipmap/search"/>
+    </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/darkviolet">
+        android:background="@color/darkviolet"
+        android:layout_marginTop="-50dp">
 
         <com.gc.materialdesign.views.ButtonFlat
             android:id="@+id/setting"
@@ -38,12 +65,21 @@
             android:paddingRight="5dp"/>
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
-        android:background="@color/darkviolet">
+        android:layout_height="150dp"
+        android:orientation="vertical">
 
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager_AD"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
-    </LinearLayout>
+        <com.viewpagerindicator.CirclePageIndicator
+            android:id="@+id/Indicator_AD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="10dip" />
+    </RelativeLayout>
 </LinearLayout>
