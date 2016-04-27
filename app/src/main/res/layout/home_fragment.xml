@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/search_ll"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
@@ -32,8 +33,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/darkviolet"
-        android:layout_marginTop="-50dp">
+        android:background="@color/darkviolet">
 
         <com.gc.materialdesign.views.ButtonFlat
             android:id="@+id/setting"
@@ -67,8 +67,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="vertical">
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/search_ll">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/viewPager_AD"
@@ -76,10 +77,10 @@
             android:layout_height="match_parent"/>
 
         <com.viewpagerindicator.CirclePageIndicator
-            android:id="@+id/Indicator_AD"
+            android:id="@+id/indicator_AD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:padding="10dip" />
     </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>

@@ -5,30 +5,20 @@ package com.mp.privatefilm.bean;
  */
 public class HomeAdvertisment {
 
-    private String ADAddress;
-    private String toPath;
+    private String AD;
 
     public HomeAdvertisment() {
     }
 
-    public HomeAdvertisment(String ADAddress, String toPath) {
-        this.ADAddress = ADAddress;
-        this.toPath = toPath;
+    public HomeAdvertisment(String AD) {
+        this.AD = AD;
     }
 
-    public String getADAddress() {
-        return ADAddress;
+    public String getAD() {
+        return AD;
     }
 
-    public void setADAddress(String ADAddress) {
-        this.ADAddress = ADAddress;
-    }
-
-    public String getToPath() {
-        return toPath;
-    }
-
-    public void setToPath(String toPath) {
-        this.toPath = toPath;
+    public void setAD(String AD) {
+        this.AD = AD;
     }
 }

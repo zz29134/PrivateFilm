@@ -19,9 +19,9 @@ public interface Constants {
 	String SHARED_PREFERENCE_NAME = "com_mobile_" + AppName + "_preferenc";
 	String PAGE_SIZE = "10";
 	int PAGESIZE = 10;
-	String secretKey = "com.mp.privatefilm";
+	String secretKey = "com.mobile.privatecinema";
 	String secretIv = "01234567";
-	String URLHead = "";
+	String URLHead = "http://61.52.198.148:8888/APP/";
 	
 	interface LongTime {
 		int volley_timeout = 10000;

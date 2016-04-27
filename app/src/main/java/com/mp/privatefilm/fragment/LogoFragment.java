@@ -2,6 +2,7 @@ package com.mp.privatefilm.fragment;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -11,6 +12,10 @@ import android.widget.TextView;
 import com.android.volley.Response;
 import com.android.volley.error.VolleyError;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
+import com.bumptech.glide.request.target.Target;
+import com.mp.commonsdk.CLog;
 import com.mp.commonsdk.fragment.BaseFragment;
 import com.mp.privatefilm.R;
 import com.mp.privatefilm.activity.MainActivity;
@@ -63,11 +68,24 @@ public class LogoFragment extends BaseFragment {
                         try {
                             if (response.getString(Constants.jsName.code).equals(
                                     Constants.jsName.code_success)) {
-                                handler.removeCallbacks(runnable_goToMain);
+
                                 String imageUrl = response.getString(Constants.jsName.content);
-                                Glide.with(context).load(imageUrl).crossFade()
+                                imageUrl = "http://img.taopic.com/uploads/allimg/130728/318764-130HPZ33685.jpg";
+                                Glide.with(context).load(imageUrl).crossFade().listener(new RequestListener<String, GlideDrawable>() {
+                                    @Override
+                                    public boolean onException(Exception e, String s, Target<GlideDrawable> target, boolean b) {
+                                        return false;
+                                    }
+
+                                    @Override
+                                    public boolean onResourceReady(GlideDrawable glideDrawable, String s, Target<GlideDrawable> target, boolean b, boolean b1) {
+                                        handler.removeCallbacks(runnable_goToMain);
+                                        handler.postDelayed(runnable_goToMain, 3000);
+                                        return false;
+                                    }
+                                })
                                         .fitCenter().into((ImageView) getContentView());
-                                handler.postDelayed(runnable_goToMain, 3000);
+
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
