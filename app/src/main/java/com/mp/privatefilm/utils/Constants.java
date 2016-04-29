@@ -14,6 +14,7 @@ public interface Constants {
 	 * 获得sd卡位置
 	 */
 	String AppName = "PrivateFilm";
+	String JniName = "PrivateFilmJni";
 	String Platform = "android";
 	String DataPath = AppName;
 	String SHARED_PREFERENCE_NAME = "com_mobile_" + AppName + "_preferenc";

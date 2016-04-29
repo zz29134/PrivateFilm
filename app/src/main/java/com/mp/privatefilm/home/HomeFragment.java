@@ -6,6 +6,7 @@ import android.os.Message;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -21,6 +22,7 @@ import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.mp.commonsdk.CLog;
 import com.mp.commonsdk.fragment.BaseFragment;
 import com.mp.commonsdk.utils.LocalDisplay;
+import com.mp.privatefilm.JniUtils;
 import com.mp.privatefilm.R;
 import com.mp.privatefilm.bean.HomeAdvertisment;
 import com.mp.privatefilm.eventbus.ToggleSettingMenu;
@@ -131,6 +133,10 @@ public class HomeFragment extends BaseFragment {
             if (null != list && list.size() > 1) {
                 handler.sendEmptyMessageDelayed(nextAD, 5000);
             }
+
+            Log.e("----getJniUrl", JniUtils.getJniUrl());
+            Log.e("----getJniEncryptKey", JniUtils.getJniEncryptKey());
+            Log.e("----getJniEncryptVector", JniUtils.getJniEncryptVector());
         }
     }
 

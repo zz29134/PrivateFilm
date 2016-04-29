@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CommonSDK/CommonSDK.iml" filepath="$PROJECT_DIR$/CommonSDK/CommonSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/PrivateFilm.iml" filepath="$PROJECT_DIR$/PrivateFilm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PrivateFilmJni/PrivateFilmJni.iml" filepath="$PROJECT_DIR$/PrivateFilmJni/PrivateFilmJni.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
