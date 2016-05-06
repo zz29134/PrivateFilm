@@ -15,23 +15,23 @@ import in.srain.cube.views.ptr.PtrDefaultHandler2;
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrHandler2;
 import in.srain.cube.views.ptr.header.MaterialHeader;
+import in.srain.cube.views.ptr.header.StoreHouseHeader;
 
 /**
  * Created by eE on 2016/4/23.
  */
 public abstract class BaseRefreshFragment extends BaseFragment implements PtrHandler2,IBaseContentFragment {
 
-    protected PtrClassicFrameLayout mPtrFrame;
+    protected PtrFrameLayout mPtrFrame;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreateView(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(getContentRid());
 
-        mPtrFrame = (PtrClassicFrameLayout) findViewById(R.id.ptrFrameLayout);
+        mPtrFrame = (PtrFrameLayout) findViewById(R.id.ptrFrameLayout);
         mPtrFrame.setMode(PtrFrameLayout.Mode.BOTH);
-        mPtrFrame.setLastUpdateTimeRelateObject(this);
         mPtrFrame.setResistance(1.7f);
         mPtrFrame.setRatioOfHeaderHeightToRefresh(1.2f);
         mPtrFrame.setDurationToClose(200);
@@ -68,5 +68,15 @@ public abstract class BaseRefreshFragment extends BaseFragment implements PtrHan
     @Override
     public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
         return PtrDefaultHandler.checkContentCanBePulledDown(frame, content, header);
+    }
+
+    @Override
+    public void onLoadMoreBegin(PtrFrameLayout frame) {
+
+    }
+
+    @Override
+    public void onRefreshBegin(PtrFrameLayout frame) {
+
     }
 }

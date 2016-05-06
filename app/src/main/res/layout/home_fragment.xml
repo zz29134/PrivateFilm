@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:background="@color/darkviolet">
+        android:background="@color/darkviolet"
+        android:visibility="gone">
 
         <EditText
             android:id="@+id/search_editText"

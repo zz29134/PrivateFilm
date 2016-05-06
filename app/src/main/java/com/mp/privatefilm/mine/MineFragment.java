@@ -13,7 +13,7 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected void onCreateView(Bundle savedInstanceState) {
-        setContentView(R.layout.minefragment);
+        setContentView(R.layout.mine_fragment);
     }
 
     @Override

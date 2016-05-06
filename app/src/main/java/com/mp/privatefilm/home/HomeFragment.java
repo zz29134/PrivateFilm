@@ -70,6 +70,7 @@ public class HomeFragment extends BaseFragment {
             search_ll.setTag(true);
         }
         mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 int animatorValue = (int)valueAnimator.getAnimatedValue();
@@ -202,7 +203,7 @@ public class HomeFragment extends BaseFragment {
             Glide.with(context).load(list.get(position).getAD()).crossFade()
                     .fitCenter().into(imageView);
             images.add(imageView);
-            container.addView(images.get(position));
+            container.addView(imageView);
             return images.get(position);
         }
 
