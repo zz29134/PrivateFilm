@@ -9,7 +9,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:background="@color/darkviolet"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <EditText
             android:id="@+id/search_editText"
